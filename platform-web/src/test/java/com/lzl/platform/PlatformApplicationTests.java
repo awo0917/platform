@@ -1,6 +1,5 @@
 package com.lzl.platform;
 
-import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.lzl.platform.model.domain.User;
 import com.lzl.platform.model.req.QueryUserReq;
@@ -23,7 +22,7 @@ public class PlatformApplicationTests {
     public void listPageTest() {
         QueryUserReq req = new QueryUserReq();
         Page<User> userPage = userService.listByPage(req);
-        JSON.toJSONString(userPage);
+        Assert.assertEquals(1,userPage.getPages());
     }
 
 }

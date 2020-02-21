@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @Discription:
  **/
 @Data
-public class PageModel<T> extends BaseModel implements Serializable {
+public class PageModel extends BaseModel implements Serializable {
 
     private int pageSize = 10;
 
